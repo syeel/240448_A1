@@ -1,4 +1,4 @@
-# Assignment 1
+# Assignment 1 (Maven)
 Counting how many java classes are in a specified folder, and how many issues they solve.
 
 # Application Process
@@ -19,7 +19,7 @@ Counting how many java classes are in a specified folder, and how many issues th
 ![Output](https://i.imgur.com/BYHfiYI.jpg)
 
 # JUnit Testing
-To run JUnit test, execute A1_JunitTestSuite.java located in Test Packages, com.realtime.a1
+To run JUnit test, execute **A1_JunitTestSuite.java** located in Test Packages, com.realtime.a1
 
 ![JUnit Test Result](https://i.imgur.com/HSSasOF.jpg)
 
