@@ -8,7 +8,7 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.dirAndFile;
 
 import java.io.File;
 import java.util.ArrayList;

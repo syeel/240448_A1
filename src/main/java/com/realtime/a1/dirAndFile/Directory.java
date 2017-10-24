@@ -8,7 +8,7 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.dirAndFile;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

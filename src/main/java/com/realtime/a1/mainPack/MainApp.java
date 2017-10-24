@@ -8,8 +8,12 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.mainPack;
 
+import com.realtime.a1.count.CountClass;
+import com.realtime.a1.count.CountIssue;
+import com.realtime.a1.dirAndFile.FileName;
+import com.realtime.a1.dirAndFile.Directory;
 import java.io.File;
 import java.util.ArrayList;
 

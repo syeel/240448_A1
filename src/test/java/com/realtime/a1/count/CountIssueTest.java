@@ -8,8 +8,9 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.count;
 
+import com.realtime.a1.count.CountIssue;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;

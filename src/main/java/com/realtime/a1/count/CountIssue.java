@@ -8,7 +8,7 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.count;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

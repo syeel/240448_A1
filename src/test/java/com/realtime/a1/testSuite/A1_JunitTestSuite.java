@@ -8,8 +8,10 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.testSuite;
 
+import com.realtime.a1.dirAndFile.*;
+import com.realtime.a1.count.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

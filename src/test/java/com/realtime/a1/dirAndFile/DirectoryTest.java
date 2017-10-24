@@ -8,8 +8,9 @@
  *
  */
 
-package com.realtime.a1;
+package com.realtime.a1.dirAndFile;
 
+import com.realtime.a1.dirAndFile.Directory;
 import java.nio.file.Paths;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
