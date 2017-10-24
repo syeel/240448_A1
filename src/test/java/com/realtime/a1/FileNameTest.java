@@ -24,6 +24,7 @@ public class FileNameTest {
         File folder = new File(Paths.get("").toAbsolutePath().toString() + "\\" + "JAVAFILES");
         FileName fName = new FileName(folder);
         fName.setFileName(folder);
+        
         ArrayList<String> expectedFileNames = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
         ArrayList<String> actualFileNames = fName.getFileName();
         assertEquals(expectedFileNames, actualFileNames);

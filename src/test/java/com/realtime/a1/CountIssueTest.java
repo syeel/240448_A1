@@ -24,6 +24,7 @@ public class CountIssueTest {
         ArrayList<String> correctFileNames = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
         CountIssue ci = new CountIssue(correctDirectory, correctFileNames);
         ci.countIssueNum(correctDirectory, correctFileNames);
+        
         int expectedIssueNumber = 3;
         int actualIssueNumber = ci.getIssueCount();
         assertEquals(expectedIssueNumber, actualIssueNumber);

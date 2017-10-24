@@ -21,6 +21,7 @@ public class DirectoryTest {
         //Real path = relative path + \JAVAFILES
         Directory dir = new Directory();
         dir.setPath();
+        
         String actual = dir.getPath();
         String expected = Paths.get("").toAbsolutePath().toString() + "\\" + "JAVAFILES";
         assertEquals(expected, actual);
