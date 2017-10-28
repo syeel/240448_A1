@@ -34,6 +34,7 @@ public class CountIssue implements Runnable{
     public void countIssueNum(String directory, ArrayList<String> fileName){
         
         int dot=0;
+        String fileSeperator = System.getProperty("file.separator");
         String key1 = "public static void main(String[] args)", extention="", filePath="";
         String key2 = "public static void main(String args[])";
         
@@ -42,7 +43,7 @@ public class CountIssue implements Runnable{
             extention = fileName.get(i).substring(dot + 1);
             
             if ("java".equals(extention)){
-                filePath = directory + "\\" +fileName.get(i);
+                filePath = directory + fileSeperator +fileName.get(i);
             
                 try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
                     String sCurrentLine;

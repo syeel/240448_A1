@@ -10,8 +10,6 @@
 
 package com.realtime.a1.dirAndFile;
 
-import com.realtime.a1.dirAndFile.Directory;
-import java.nio.file.Paths;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -24,7 +22,7 @@ public class DirectoryTest {
         dir.setPath();
         
         String actual = dir.getPath();
-        String expected = Paths.get("").toAbsolutePath().toString() + "\\" + "JAVAFILES";
-        assertEquals(expected, actual);
+        String expected = System.getProperty("user.dir") + System.getProperty("file.separator") + "JAVAFILES";
+        assertEquals(expected, actual); 
     }
 }

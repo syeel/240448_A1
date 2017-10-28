@@ -10,7 +10,6 @@
 
 package com.realtime.a1.count;
 
-import com.realtime.a1.count.CountClass;
 import java.util.ArrayList;
 import java.util.Arrays;
 import static org.junit.Assert.assertEquals;

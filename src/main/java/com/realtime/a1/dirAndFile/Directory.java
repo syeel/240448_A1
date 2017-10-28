@@ -10,12 +10,9 @@
 
 package com.realtime.a1.dirAndFile;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 public class Directory implements Runnable{
     
-    private static String relativePath, realPath;
+    private String realPath;
     
     @Override
     public void run() {
@@ -23,9 +20,10 @@ public class Directory implements Runnable{
      }
     
     public void setPath(){
-        Path currentRelativePath = Paths.get("");
-        relativePath = currentRelativePath.toAbsolutePath().toString();
-        realPath = relativePath + "\\" + "JAVAFILES"; 
+        String fileSeperator = System.getProperty("file.separator");
+        String workingDirectory = System.getProperty("user.dir");
+
+        realPath = workingDirectory + fileSeperator + "JAVAFILES"; 
     }
     
     public String getPath(){
