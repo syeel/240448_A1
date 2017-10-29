@@ -37,24 +37,31 @@ public class MainApp {
         FileName fName = new FileName(folder);
         Thread fn1 = new Thread(fName);
         fn1.start();
-        fn1.join(); 
-        ArrayList<String> fileName = fName.getFileName();
+        fn1.join();
         
-        // Creating and starting thread for CountClass
-        CountClass cClass = new CountClass(fileName);
-        Thread cc1 = new Thread(cClass);
-        cc1.start();
-        cc1.join(); 
-        int classCount = cClass.getJavaClassCount();
+        boolean isEmptyFolder = fName.getFolderState();
+        if (isEmptyFolder == false){
+            ArrayList<String> fileName = fName.getFileName();
         
-        // Creating and starting thread for CountIssue
-        CountIssue cIssue = new CountIssue(directory, fileName);
-        Thread ci1 = new Thread(cIssue);
-        ci1.start();
-        ci1.join(); 
-        int issueCount = cIssue.getIssueCount();
+            // Creating and starting thread for CountClass
+            CountClass cClass = new CountClass(fileName);
+            Thread cc1 = new Thread(cClass);
+            cc1.start();
+            cc1.join(); 
+            int classCount = cClass.getJavaClassCount();
+        
+            // Creating and starting thread for CountIssue
+            CountIssue cIssue = new CountIssue(directory, fileName);
+            Thread ci1 = new Thread(cIssue);
+            ci1.start();
+            ci1.join(); 
+            int issueCount = cIssue.getIssueCount();
 
-        System.out.println("Number of Java Files = " + classCount);
-        System.out.println("Number of Issues = " + issueCount);
+            System.out.println("Number of Java Files = " + classCount);
+            System.out.println("Number of Issues = " + issueCount);
+        }
+        else{
+            System.out.println("JAVAFILES folder is empty, please put java files you want to analyse in it.");
+        }  
     }     
 }

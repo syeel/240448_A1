@@ -10,6 +10,7 @@
 
 package com.realtime.a1.count;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
@@ -19,12 +20,17 @@ public class CountClassTest {
     
     @Test
     public void testNumberOfClass(){
-        ArrayList<String> correctFileNames = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
-        CountClass cc = new CountClass(correctFileNames);
-        cc.setJavaClassCount(correctFileNames);
+        int expectedClassNumber=0;
+        int actualClassNumber=0;
+        File folder = new File(System.getProperty("user.dir") + System.getProperty("file.separator") + "JAVAFILES");
         
-        int expectedClassNumber = 4;
-        int actualClassNumber = cc.getJavaClassCount();
+        if (folder.list().length > 0){
+            ArrayList<String> correctFileNames = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
+            CountClass cc = new CountClass(correctFileNames);
+            cc.setJavaClassCount(correctFileNames);
+            expectedClassNumber = 4;
+            actualClassNumber = cc.getJavaClassCount();
+        }
         assertEquals(expectedClassNumber, actualClassNumber);
     }   
 }

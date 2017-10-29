@@ -20,12 +20,17 @@ public class FileNameTest {
     
     @Test
     public void testCorrectFileNames(){
+        ArrayList<String> expectedFileNames;
         File folder = new File(System.getProperty("user.dir") + System.getProperty("file.separator") + "JAVAFILES");
         FileName fName = new FileName(folder);
         fName.setFileName(folder);
         
-        ArrayList<String> expectedFileNames = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
+        if (folder.list().length > 0){
+            expectedFileNames = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
+        }else{
+            expectedFileNames = new ArrayList(Arrays.asList());
+        }
         ArrayList<String> actualFileNames = fName.getFileName();
-        assertEquals(expectedFileNames, actualFileNames);
+        assertEquals(expectedFileNames, actualFileNames);    
     }   
 }

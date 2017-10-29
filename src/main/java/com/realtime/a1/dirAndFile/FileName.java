@@ -17,6 +17,7 @@ public class FileName implements Runnable{
     
     private ArrayList<String> fileName = new ArrayList();
     private File folder;
+    private boolean isEmptyFolder;
     
     public FileName (final File folder){
         this.folder = folder;
@@ -28,16 +29,26 @@ public class FileName implements Runnable{
      }
     
     public void setFileName(File folder) {
-        for (final File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                setFileName(fileEntry);
-            } else {
-                fileName.add((fileEntry.getName()));
-            }
+        if (folder.list().length > 0){
+            isEmptyFolder = false;
+            for (final File fileEntry : folder.listFiles()) {
+                if (fileEntry.isDirectory()) {
+                    setFileName(fileEntry);
+                } else {
+                    fileName.add((fileEntry.getName()));
+                }
+            }    
+        }
+        else{
+            isEmptyFolder = true;
         }
     }
     
     public ArrayList<String> getFileName(){
         return fileName;
     } 
+    
+    public boolean getFolderState(){
+        return isEmptyFolder;
+    }  
 }
