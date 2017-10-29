@@ -29,10 +29,11 @@ This application is only suitable for counting issues which each issue only have
 # Reference
 1. Get all file names in a folder: https://stackoverflow.com/a/1846349
 2. Get current working directory: https://stackoverflow.com/a/1846349
-3. Manipulating characters in string: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
-4. Read file using BufferedReader: https://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example
-5. SubString Matching: https://stackoverflow.com/a/2275035
-6. Pass parameters to java thread: https://stackoverflow.com/a/877113
-7. Returning value from thread: https://stackoverflow.com/a/9148954
-8. JUnit tutorial: https://www.youtube.com/watch?v=o5k9NOR9lrI
-9. ArrayList equality JUnit testing: https://stackoverflow.com/a/15457020
+3. Construct file path based on OS: https://www.mkyong.com/java/how-to-construct-a-file-path-in-java/
+4. Manipulating characters in string: https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
+5. Read file using BufferedReader: https://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example
+6. SubString Matching: https://stackoverflow.com/a/2275035
+7. Pass parameters to java thread: https://stackoverflow.com/a/877113
+8. Returning value from thread: https://stackoverflow.com/a/9148954
+9. JUnit tutorial: https://www.youtube.com/watch?v=o5k9NOR9lrI
+10. ArrayList equality JUnit testing: https://stackoverflow.com/a/15457020
