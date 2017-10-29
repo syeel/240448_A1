@@ -39,7 +39,7 @@ public class CountIssue implements Runnable{
         String key2 = "public static void main(String args[])";
         
         for (int i=0; i<fileName.size(); i++){
-            dot = fileName.get(i).lastIndexOf(".");
+            dot = fileName.get(i).lastIndexOf('.');
             extention = fileName.get(i).substring(dot + 1);
             
             if ("java".equals(extention)){

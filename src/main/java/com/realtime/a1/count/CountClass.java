@@ -29,7 +29,7 @@ public class CountClass implements Runnable{
     public void setJavaClassCount(ArrayList<String> fileName){
         
         for (int i=0; i<fileName.size(); i++){
-            int dot = fileName.get(i).lastIndexOf(".");
+            int dot = fileName.get(i).lastIndexOf('.');
             String extention = fileName.get(i).substring(dot + 1);
             
             if ("java".equals(extention)){
